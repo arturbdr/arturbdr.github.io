@@ -1,0 +1,42 @@
+baseURL = 'https://arturbdr.github.io/'
+languageCode = 'en-us'
+title = 'Artur Drummond - Software Engineer'
+theme = 'hugo-coder'
+
+[params]
+author = "Artur Drummond"
+info = "Backend Software Engineer"
+description = "Artur Drummond's personal website"
+keywords = "blog,developer,personal"
+colorScheme = "dark"
+
+# Menu links
+[menu]
+[[menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+[[menu.main]]
+name = "Experience"
+weight = 2
+url = "experience/"
+[[menu.main]]
+name = "Projects"
+weight = 3
+url = "projects/"
+[[menu.main]]
+name = "Contact"
+weight = 4
+url = "contact/"
+
+# Social links
+[[params.social]]
+name = "Github"
+icon = "fa fa-github fa-2x"
+weight = 1
+url = "https://github.com/arturbdr/"
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin fa-2x"
+weight = 2
+url = "https://linkedin.com/in/arturbdr/"
