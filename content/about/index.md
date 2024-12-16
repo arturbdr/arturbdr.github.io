@@ -3,7 +3,6 @@ title: "About Me"
 date: 2024-01-02
 draft: false
 ---
-Hi Lara!
 
 I'm a Software Engineer with 17+ years of experience building systems that solve real-world problems and help businesses
 grow. My work focuses on designing and implementing scalable architectures, leading technical teams, and guiding
