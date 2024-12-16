@@ -22,20 +22,15 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4.1.1
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: 20
-
-      - name: Install node modules
-        run: npm install
+          submodules: true
+          fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2  # Changed from v3 to v2
+        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.121.1'        # Specific version instead of 'latest'
+          hugo-version: '0.121.1'
           extended: true
 
       - name: Build
