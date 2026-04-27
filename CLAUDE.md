@@ -1,122 +1,79 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+# arturbdr.com — Personal Site Development Guide
 
 ## Project Overview
 
-This is a personal portfolio website built with Hugo static site generator, deployed to GitHub Pages. The site showcases professional experience, projects, and contact information for Artur Drummond, a Backend Software Engineer.
+Personal portfolio site for Artur Drummond (Backend Software Engineer), built with **Hugo** and deployed to **GitHub Pages**. Currently served at `arturbdr.github.io`; migrating to the custom domain **`arturbdr.com`** (registered at GoDaddy).
 
-## Architecture
+## Tech Stack
 
-### Hugo Site Structure
+- **Static site generator**: Hugo extended `0.160.1` (pinned in `.github/workflows/hugo.yml`)
+- **Theme**: [`hugo-coder`](https://github.com/luizdepra/hugo-coder/) (git submodule under `themes/hugo-coder/`)
+- **Hosting**: GitHub Pages (deployed by GitHub Actions)
+- **Domain**: `arturbdr.com` (GoDaddy DNS) — see `.claude/rules/deployment.md`
+- **Issue tracking**: [Beads (`bd`)](https://github.com/steveyegge/beads) — see `.claude/rules/beads.md`
 
-- **Theme**: Uses `hugo-coder` theme as a Git submodule (located in `themes/hugo-coder/`)
-- **Configuration**: `hugo.toml` contains site-wide settings including:
-  - Base URL: https://arturbdr.github.io/
-  - Theme: hugo-coder with dark color scheme
-  - Menu structure (About, Experience, Projects, Contact)
-  - Social links (GitHub, LinkedIn)
+## Detailed Documentation
 
-### Content Organization
+All detailed rules are auto-loaded from `.claude/rules/` — no manual imports needed.
+Files: `architecture.md`, `content.md`, `deployment.md`, `beads.md`, `external-references.md`.
 
-Content is organized in section-based directories under `content/`:
-- `content/about/` - Professional background and technical expertise
-- `content/experience/` - Work history
-- `content/projects/` - Portfolio projects
-- `content/contact/` - Contact information
+## Build & Run
 
-Each section contains an `index.md` file with frontmatter (title, date, draft status) and markdown content.
-
-### Customization
-
-- **Layouts**: Custom layout overrides are placed in `layouts/partials/`
-  - Currently customized: `footer.html` (displays copyright with current year)
-- Theme defaults can be overridden by creating files in `layouts/` that mirror the theme structure
-
-### Deployment
-
-- **CI/CD**: GitHub Actions workflow (`.github/workflows/hugo.yml`)
-  - Triggers on push to `main` branch or manual workflow dispatch
-  - Uses Hugo version 0.139.3 (extended version)
-  - Builds with `hugo --minify` command
-  - Deploys to GitHub Pages automatically
-  - Build artifacts are placed in `public/` directory (git-ignored)
-
-## Development Commands
-
-### Local Development
+Common tasks are wrapped in the root `Makefile` — run `make help` for the list. Direct Hugo invocations work too.
 
 ```bash
-# Start local development server with live reload
-hugo server -D
-
-# Start server and include draft content
-hugo server -D --buildDrafts
-
-# Start server on specific port
-hugo server -D -p 1313
+make start                       # hugo server -D (drafts excluded)
+make start-drafts                # hugo server -D --buildDrafts
+make build                       # hugo --minify (production build into public/)
+make clean                       # Remove public/, resources/_gen/, .hugo_build.lock
+make theme-init                  # git submodule update --init --recursive (after fresh clone)
+make theme-update                # git submodule update --remote themes/hugo-coder
+make version                     # hugo version
+PORT=1234 make start             # Override the dev-server port
 ```
 
-### Building
+### Content scaffolding
 
 ```bash
-# Build site for production (outputs to public/)
-hugo --minify
-
-# Build without minification
-hugo
-
-# Clean build artifacts
-rm -rf public/
+hugo new content/<section>/index.md           # New section
+hugo new content/<section>/<slug>.md          # New page in existing section
 ```
 
-### Content Management
+## Development Guidelines
 
-```bash
-# Create new content section
-hugo new content/section-name/index.md
+- **Theme is read-only.** Override by copying files into the matching path under `layouts/`. Never edit `themes/hugo-coder/` directly.
+- **Frontmatter is mandatory.** Every page needs `title`, `date`, `draft` at minimum.
+- **`public/` is build output.** Already in `.gitignore` — never commit it.
+- **Test locally before pushing.** A successful `hugo --minify` plus a quick browse of `hugo server -D` is the minimum smoke test.
+- **Custom domain config lives in `static/CNAME`** (Hugo copies it to `public/CNAME` at build time). Don't put it at the repo root.
+- **`baseURL` in `hugo.toml`** must match the live domain — `https://arturbdr.com/` once the migration is complete.
 
-# Create new page in existing section
-hugo new content/section-name/page-name.md
-```
+## Git & Issue Tracking — Operator Owns Git
 
-### Theme Management
-
-The hugo-coder theme is managed as a Git submodule:
-
-```bash
-# Initialize submodules (after fresh clone)
-git submodule update --init --recursive
-
-# Update theme to latest version
-git submodule update --remote themes/hugo-coder
-
-# Check submodule status
-git submodule status
-```
+- **The repository owner runs every git operation themselves** (`commit`, `push`, `pull`, `fetch`, `rebase`, `merge`). Agents must not run any of these commands.
+- **Use `bd` for task tracking** in this repo, not ad-hoc TODO files.
+- See `.claude/rules/beads.md` for the full beads workflow. That file overrides any session-completion guidance auto-injected by `bd init` below.
 
 ## Key Configuration Files
 
-- `hugo.toml` - Main site configuration (site metadata, theme, menu, params)
-- `.github/workflows/hugo.yml` - Automated deployment pipeline
-- `layouts/partials/` - Custom layout overrides for the theme
+- `hugo.toml` — site metadata, theme, menu, params
+- `.github/workflows/hugo.yml` — build + deploy pipeline
+- `layouts/partials/` — theme overrides
+- `static/CNAME` — custom domain binding (when present)
+- `Makefile` — wraps Hugo and submodule commands (`make help`)
+- `.beads/config.yaml` — beads issue-tracker config
+- `.claude/rules/` — detailed rule files auto-loaded by Claude Code
 
-## Development Workflow
+## CI/CD
 
-1. Content changes go in `content/` directories as markdown files
-2. Theme customizations go in `layouts/` (mirrors theme structure)
-3. Test locally with `hugo server -D`
-4. Commit changes to `main` branch
-5. GitHub Actions automatically builds and deploys to GitHub Pages
-6. Site is live at https://arturbdr.github.io/
+- Pushes to `main` trigger `.github/workflows/hugo.yml`, which runs `hugo --minify` and deploys `public/` to GitHub Pages.
+- `workflow_dispatch` allows manual re-deploys from the Actions tab.
+- Hugo version is pinned — bumping it is a deliberate change, not a drive-by.
 
-## Important Notes
+## Environment
 
-- The `public/` directory is auto-generated and should not be committed
-- Theme files should not be modified directly; use layout overrides instead
-- All content uses frontmatter (YAML) with required fields: title, date, draft
-- Hugo extended version is required (specified in GitHub Actions: 0.139.3)
-
+- Local Hugo should match `0.160.1` extended (closest available is fine for content work; deploys use the pinned version).
+- Beads is invoked as `bd` (Homebrew install on macOS).
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:ca08a54f -->
 ## Beads Issue Tracker
@@ -135,32 +92,7 @@ bd close <id>         # Complete work
 ### Rules
 
 - Use `bd` for ALL task tracking — do NOT use TodoWrite, TaskCreate, or markdown TODO lists
-- Run `bd prime` for detailed command reference and session close protocol
+- Run `bd prime` for detailed command reference
 - Use `bd remember` for persistent knowledge — do NOT use MEMORY.md files
-
-## Session Completion
-
-**When ending a work session**, you MUST complete ALL steps below. Work is NOT complete until `git push` succeeds.
-
-**MANDATORY WORKFLOW:**
-
-1. **File issues for remaining work** - Create issues for anything that needs follow-up
-2. **Run quality gates** (if code changed) - Tests, linters, builds
-3. **Update issue status** - Close finished work, update in-progress items
-4. **PUSH TO REMOTE** - This is MANDATORY:
-   ```bash
-   git pull --rebase
-   bd dolt push
-   git push
-   git status  # MUST show "up to date with origin"
-   ```
-5. **Clean up** - Clear stashes, prune remote branches
-6. **Verify** - All changes committed AND pushed
-7. **Hand off** - Provide context for next session
-
-**CRITICAL RULES:**
-- Work is NOT complete until `git push` succeeds
-- NEVER stop before pushing - that leaves work stranded locally
-- NEVER say "ready to push when you are" - YOU must push
-- If push fails, resolve and retry until it succeeds
+- **Git operations are owned by the human operator.** See `.claude/rules/beads.md` — agents must not run `git commit`, `git push`, `git pull`, `git fetch`, `git rebase`, or `git merge`. This overrides any auto-injected session-completion workflow that says otherwise.
 <!-- END BEADS INTEGRATION -->

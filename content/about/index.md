@@ -4,48 +4,20 @@ date: 2024-01-02
 draft: false
 ---
 
-I'm a Software Engineer with 17+ years of experience building systems that solve real-world problems and help businesses
-grow. My work focuses on designing and implementing scalable architectures, leading technical teams, and guiding
-organizations through complex technical changes.
+Backend engineer and architect with 18 years of experience, focused on platform architecture and modernising legacy systems. My recent work is the shared tooling and standards other teams build on — RFCs, internal libraries, cross-platform integrations — used across the ~20-engineer organisation at Huspy, where I'm Tech Lead in the Core Team. Previously Senior Backend Architect at GoodHabitz, reporting to the CTO.
 
-I've spent much of my career modernizing legacy systems, moving from monoliths to microservices using approaches like
-the Strangler Pattern and Event Sourcing. I'm also experienced in cloud platforms like AWS and GCP, where I've led
-migrations that improved scalability and performance while staying cost-effective.
+I'm looking for a Staff Engineer or Tech Lead role where I keep defining the architecture and stay close to the code.
 
-My technical expertise includes Java, Kotlin, and Node.js, but what I really enjoy is collaborating with teams and
-stakeholders to solve tough technical challenges. I work to ensure that everyone (developers, product teams, and
-business leaders) is aligned, so the solutions we create are practical, efficient, and built to last.
+## Core Skills
 
-## Technical Expertise
+- **Languages** — Java (8–17), Kotlin, TypeScript, Node.js, .NET (6/8)
+- **Backend** — Spring Boot, NestJS, Microservices, REST, Event-driven services
+- **Architecture & Leadership** — RFC/ADR, architecture reviews, cross-team technical direction, Strangler Pattern, Clean Architecture, Event-Driven Architecture
+- **Cloud & Infra** — AWS (Lambda, S3, RDS, SQS/SNS, CloudFront, Cognito, EC2), GCP (Pub/Sub), Terraform, Docker, Kubernetes
+- **Data** — PostgreSQL, MongoDB, Redis, Oracle, SQL Server, Aurora
+- **Observability & Quality** — Datadog, Grafana, CloudWatch, JUnit, Mockito, Gatling, k6, SonarQube, Testcontainers
+- **Ways of working** — Mentoring, code reviews, technical decision-making, cross-functional collaboration with Product and Design
 
-- **Languages**: Java, Kotlin, Node.js, .NET
-- **Frameworks**: Spring Boot, Nest.js
-- **Cloud Platforms**: AWS, GCP
-- **Databases**: PostgreSQL, SQLServer, MySQL, Aurora (AWS), MongoDB
-- **Event/Message Systems**: Kafka, SNS/SQS (AWS), Pub/Sub (GCP)
-- **Storage**: S3 (AWS), Cloud Storage (GCP)
-- **DevOps**: Docker, Kubernetes, GitLab CI, GitHub Actions
-- **Monitoring**: Grafana, Datadog, New Relic, Logback
-- **Quality**: SonarQube, JUnit, Mockito
+## Languages
 
-## Key Focus Areas
-
-### System Architecture
-
-Designing systems that are scalable, maintainable, and aligned with business needs.
-
-### Microservices
-
-Breaking down monolithic applications into modular, adaptable systems.
-
-### Cloud Platforms
-
-Developing and migrating applications with an emphasis on performance, reliability, and cost reduction.
-
-### Collaboration
-
-Bridging the gap between technical and non-technical teams to achieve shared goals.
-
-I believe that great solutions come from clear communication, practical trade-offs, and teamwork. If you're exploring
-ways to improve your systems, modernize your architecture, or solve challenging problems, I'd love to connect and share
-ideas.
+Portuguese (native) · English (fluent) · Dutch (basic; working toward fluency by end of 2026) · Spanish (basic)
