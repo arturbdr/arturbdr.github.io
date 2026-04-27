@@ -201,17 +201,18 @@
     {{ if $author.subtitle }}
     <h2 class="greeting-subtitle">{{ $author.subtitle }}</h2>
     {{ end }}
+    {{/* LOCAL MOD: wrap whole carousel block in the summary check so an empty `summary: []` in author.yaml hides the wrapper + cursor too, not just the list items. Reapply on Toha re-vendor. */}}
+    {{ if $author.summary }}
     <div class="typing-carousel">
       <span id="typed" class="typed"></span>
       <span class="ityped-cursor"></span>
     </div>
     <ul id="typing-carousel-data">
-      {{ if $author.summary }}
       {{ range $author.summary }}
       <li>{{ . }}</li>
-      {{ end}}
       {{ end }}
     </ul>
+    {{ end }}
     {{ if $sections }}
     {{ range first 1 (where (sort $sections "section.weight") ".section.enable" true) }}
     {{ $sectionID := replace (lower .section.name) " " "-" }}
