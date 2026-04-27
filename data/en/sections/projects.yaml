@@ -22,7 +22,7 @@ projects:
   - name: "Internationalisation Platform"
     role: "Tech Lead"
     timeline: "2025 – Present"
-    summary: "Wrote the RFC, evaluated Crowdin and alternatives on CI/CD integration, proofreading workflow and cost. Designed and led the rollout across mobile, web and backend so all three platforms feed from the same translation source. Now live with 7 languages — adding a new locale no longer requires engineering work."
+    summary: "Wrote the RFC, evaluated Crowdin and alternatives on CI/CD integration, proofreading workflow and cost. Designed and led the rollout across mobile, web and backend so all three platforms feed from the same translation source. Now live with 7 languages. Adding a new locale no longer requires engineering work."
     tags: ["huspy"]
 
   - name: "Document Service"
@@ -34,7 +34,7 @@ projects:
   - name: "Shared JWT Validation Library"
     role: "Tech Lead"
     timeline: "2025 – Present"
-    summary: "Two libraries with identical behaviour — Spring Boot and Node.js. Caches signing keys per Keycloak realm and AWS Cognito pool at startup; validates per-request from the realm claim. Hand-written JWT validation is gone from every microservice; new realms are configuration, not code."
+    summary: "Two libraries with identical behaviour, one for Spring Boot and one for Node.js. Caches signing keys per Keycloak realm and AWS Cognito pool at startup; validates per-request from the realm claim. Hand-written JWT validation is gone from every microservice; new realms are configuration, not code."
     tags: ["huspy"]
 
   - name: "LTI 1.3 Microservice (LMS Integration Strangler)"

@@ -22,65 +22,81 @@ buttons:
 
 skills:
   - name: Java
-    summary: "Primary language for 18 years. Java 8 through 17 across Spring Boot microservices, Strangler-pattern monolith extractions, and high-throughput backend platforms."
+    logo: /images/sections/skills/java.svg
+    summary: "Primary language since 2007. Currently Java 8 through 25 on Spring Boot microservices and Strangler-pattern monolith rebuilds."
     categories: ["language", "backend"]
 
   - name: Kotlin
-    summary: "Production Kotlin since 2021 across Spring Boot services at Huspy, GoodHabitz, and Jumbo. JVM idioms, coroutines, and Spring stack."
+    logo: /images/sections/skills/kotlin.svg
+    summary: "Production Kotlin since 2021. Spring Boot services at Huspy, GoodHabitz and Jumbo. Coroutines and idiomatic Kotlin on the JVM."
     categories: ["language", "backend"]
 
   - name: TypeScript / Node.js
-    summary: "NestJS BFFs and microservices at Huspy and Jumbo. Node 18+, strict TypeScript, Clean Architecture patterns."
+    logo: /images/sections/skills/typescript.svg
+    summary: "NestJS Backend-for-Frontend and microservices at Huspy and Jumbo. Strict TypeScript, Clean Architecture, Node 18+."
     categories: ["language", "backend"]
 
-  - name: .NET (6 / 8)
-    summary: "Built and modernised .NET services at GoodHabitz including the LTI 1.3 Strangler-pattern rebuild on .NET 6/8."
+  - name: ".NET (6 / 8)"
+    logo: /images/sections/skills/dotnet.svg
+    summary: "Built and rewrote .NET services at GoodHabitz, including the LTI 1.3 Strangler rebuild on .NET 6 and 8."
     categories: ["language", "backend"]
 
   - name: Spring Boot
-    summary: "10+ years of Spring Boot for backend services. Spring Cloud (Feign, ConfigServer, Zuul), Spring Security, JPA, and event-driven patterns."
+    logo: /images/sections/skills/spring.svg
+    summary: "Ten years on Spring Boot for backend services. Spring Cloud (Feign, ConfigServer, Zuul), Spring Security, JPA, event-driven patterns."
     categories: ["backend"]
 
   - name: NestJS
-    summary: "Backend-for-Frontend and microservices in NestJS. Modular architecture, dependency injection, and TypeScript-first APIs."
+    logo: /images/sections/skills/nestjs.svg
+    summary: "Backend-for-Frontend and microservices in NestJS. Modular structure, dependency injection, TypeScript-first APIs."
     categories: ["backend"]
 
   - name: AWS
-    summary: "Lambda, S3, RDS, SQS/SNS, CloudFront, Cognito, EC2. Migrations from on-prem and other clouds onto AWS, plus production workloads at Huspy and Jumbo."
+    logo: /images/sections/skills/aws.svg
+    summary: "Lambda, S3, RDS, SQS/SNS, CloudFront, Cognito, EC2. Migrations from on-prem and other clouds onto AWS, plus the production workloads at Huspy and Jumbo."
     categories: ["cloud"]
 
   - name: GCP
-    summary: "Pub/Sub for async event flows. Built and ran services on GKE / Cloud Run during the GoodHabitz era before the AWS consolidation."
+    logo: /images/sections/skills/gcp.svg
+    summary: "Pub/Sub for async event flows. Built and ran services on GKE and Cloud Run during the GoodHabitz era before the AWS consolidation."
     categories: ["cloud"]
 
   - name: Terraform
+    logo: /images/sections/skills/terraform.svg
     summary: "Provisioned the AWS infrastructure for the OneCloud migration at GoodHabitz and the Document Service at Huspy. Modules, remote state, plan/apply workflow."
     categories: ["cloud"]
 
   - name: Kubernetes
-    summary: "Production deployments since 2018. Auto-scaling microservices, Helm, kubectl, and the operational glue around them."
+    logo: /images/sections/skills/kubernetes.svg
+    summary: "Production deployments since 2018. Auto-scaling microservices, Helm, kubectl and the operational glue around them."
     categories: ["cloud"]
 
   - name: Docker
+    logo: /images/sections/skills/docker.svg
     summary: "Multi-stage builds, hardened production images, local dev compose stacks across every backend project of the last 8 years."
     categories: ["cloud"]
 
   - name: PostgreSQL
-    summary: "Primary relational store across most projects. Schema design, migrations (Flyway / Liquibase), tuning, and partition strategies for high-write workloads."
+    logo: /images/sections/skills/postgresql.svg
+    summary: "Primary relational store on most projects. Schema design, migrations (Flyway / Liquibase), tuning and partition strategies for high-write workloads."
     categories: ["data"]
 
   - name: MongoDB
-    summary: "Document-store workloads at Jumbo and Netshoes — including replacing a relational DB that couldn't keep up with read volume."
+    logo: /images/sections/skills/mongodb.svg
+    summary: "Document-store workloads at Jumbo and Netshoes, including replacing a relational DB that couldn't keep up with the read volume."
     categories: ["data"]
 
   - name: Redis
+    logo: /images/sections/skills/redis.svg
     summary: "Caching tier in front of slow legacy systems and as a hot-read store for frequently accessed data."
     categories: ["data"]
 
   - name: Datadog
-    summary: "APM, logs, dashboards, and alerting standard set across Huspy, GoodHabitz, Jumbo, Netshoes. Used to drive ~30% Document Service latency wins."
+    logo: /images/sections/skills/datadog.svg
+    summary: "APM, logs, dashboards, alerting. Standard set across Huspy, GoodHabitz, Jumbo and Netshoes. The Datadog metrics drove the ~30% latency improvement on the Document Service."
     categories: ["observability"]
 
   - name: Grafana / CloudWatch
-    summary: "Custom dashboards for stakeholder visibility (e.g. Finance team monitoring Salesforce ↔ Backoffice flow at GoodHabitz)."
+    logo: /images/sections/skills/grafana.svg
+    summary: "Custom dashboards for stakeholder visibility (e.g. Finance team monitoring the Salesforce / Backoffice flow at GoodHabitz)."
     categories: ["observability"]
