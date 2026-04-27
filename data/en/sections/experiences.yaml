@@ -1,0 +1,80 @@
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+
+experiences:
+  - company:
+      name: "Huspy"
+      url: "https://www.huspy.com"
+      location: "Dubai (Remote)"
+      overview: "Real estate / Mortgage platform. Engineering org of ~20 engineers; the Core Team defines the architecture and shared frameworks the rest of the teams build on."
+    positions:
+      - designation: "Tech Lead, Core Team"
+        start: "Jul 2025"
+        responsibilities:
+          - "Define the architecture and shared frameworks for the ~20-engineer organisation. RFC-led: write the proposal, get the Engineering group aligned, then build it."
+          - "**Internationalisation Platform (Crowdin)**: wrote the RFC, evaluated alternatives on CI/CD integration / proofreading workflow / cost, and led the rollout across mobile, web and backend. Now live with 7 languages — adding a new locale is a content task, not engineering work."
+          - "**Document Service**: designed and built a centralised document and image platform on Kotlin / Spring Boot with AWS Lambda, S3, Postgres and CloudFront. Document load times dropped ~30% after Datadog-driven tuning."
+          - "**Shared JWT validation library** (Spring Boot + Node.js): centralised JWT validation across multiple Keycloak realms and AWS Cognito. Used by every backend service; new realms can be added through configuration."
+          - "**Backend-for-Frontend**: NestJS BFF now shared by mobile and web teams. Removed duplicated orchestration code and extra network round-trips; one security-check entry point."
+
+  - company:
+      name: "GoodHabitz"
+      url: "https://www.goodhabitz.com"
+      location: "Eindhoven, Netherlands · Hybrid"
+      overview: "Online-learning platform used by employers to train their employees. Cross-cloud architecture across GCP, Azure, and on-prem during my tenure."
+    positions:
+      - designation: "Senior Backend Architect"
+        start: "Jul 2022"
+        end: "Jun 2025"
+        responsibilities:
+          - "**OneCloud AWS migration (2025)**: one of four architects working alongside SRE to consolidate systems from GCP, Azure and on-prem onto AWS. Ran HammerDB benchmarks for database sizing; provisioned the new infrastructure with Terraform."
+          - "**LTI 1.3 / SCORM replacement (2024)**: replaced the legacy LMS-integration service using the Strangler Pattern; added support for LTI 1.3 on top of LTI 1.1 and SCORM. Migrated all clients gradually using LaunchDarkly feature flags, no disruption."
+          - "**Salesforce integration (2023)**: built a new Kotlin / Spring Boot microservice that replaced manual data copying between Salesforce and the GoodHabitz Backoffice, with Datadog dashboards for the Finance team."
+          - "**Video performance with Mux CDN (2022)**: designed and built a Kotlin microservice that routed video traffic to Mux. Video load times dropped ~45% in NL and 200%+ in LATAM. The deployment pipeline became a template for other services."
+
+  - company:
+      name: "Jumbo"
+      url: "https://www.jumbo.com"
+      location: "Eindhoven, Netherlands"
+      overview: "Dutch supermarket chain. Joined via WAES consultancy in 2018, internalised by Jumbo in 2020. Worked across the e-commerce platform composed of many Java services."
+    positions:
+      - designation: "Principal Engineer"
+        start: "Aug 2018"
+        end: "Jun 2022"
+        responsibilities:
+          - "Led the extraction of the **Order Management System** from a Java 7 monolith into Spring Boot microservices using the Strangler Pattern. Removed one domain of 150k+ lines of code from the monolith; new services run on Kubernetes with PostgreSQL / MongoDB, Redis, and AWS SNS / SQS."
+          - "**Customer Management redesign**: Clean Architecture rebuild — API response times improved ~85%, deployments moved to zero-downtime."
+          - "**Jumbo Extra loyalty platform**: architected on Java / NestJS with MongoDB; established the Clean Architecture patterns the team continued to use."
+          - "**Earlier work (2018 – 2020, as WAES consultant)**: replaced the legacy customer software with a new Java / MongoDB microservice on Kubernetes. Response times improved 60%+ and Kubernetes handled scale-up / down automatically."
+
+  - company:
+      name: "Netshoes"
+      url: "https://www.netshoes.com.br"
+      location: "Brazil"
+      overview: "E-commerce operating across Brazil, Argentina and Mexico. The Checkout team needed integrations against 7+ payment methods on top of a previous Oracle ATG platform."
+    positions:
+      - designation: "Software Architect (Java)"
+        start: "Apr 2016"
+        end: "Jul 2018"
+        responsibilities:
+          - "Designed and delivered integrations with **7+ payment methods** across Brazil, Argentina and Mexico (including PayPal)."
+          - "Migrated the Checkout platform from **Oracle ATG to Spring Boot microservices** with Jenkins CI/CD. Spring Cloud (Feign, ConfigServer, Zuul), Kafka and RabbitMQ for async integration, Redis and EhCache for hot reads."
+          - "Knowledge-transfer dojos to spread the patterns across teams."
+
+  - company:
+      name: "Earlier experience"
+      overview: "Java roles spanning consultancies, banking and telecom — the foundation for everything since."
+    positions:
+      - designation: "IBM Brasil · Smiles · Cielo · Capgemini · Autbank · BV Financeira · Amdocs"
+        start: "2007"
+        end: "2016"
+        responsibilities:
+          - "**IBM Brasil** — Senior System Architect / Senior Java Architect (2015 – 2016)"
+          - "**Smiles** — Java Solution Architect (2014 – 2015)"
+          - "**Cielo** — Java Development Specialist (2014)"
+          - "**Capgemini** — Java Technical Leader, client Caixa Econômica Federal (2012 – 2014)"
+          - "**Autbank** · **BV Financeira** · **Amdocs** — Java System Analyst roles (2007 – 2012)"

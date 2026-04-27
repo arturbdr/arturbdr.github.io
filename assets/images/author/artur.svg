@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Artur Drummond avatar">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f6feb"/>
+      <stop offset="100%" stop-color="#0d3a8a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+  <text x="100" y="115" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="700" fill="#ffffff" letter-spacing="-2">AD</text>
+</svg>

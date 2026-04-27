@@ -1,0 +1,31 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+designation: "Tech Lead, Core Team"
+company:
+  name: "Huspy"
+  url: "https://www.huspy.com"
+
+summary: |
+  Backend engineer and architect with **18 years of experience**, focused on platform architecture and modernising legacy systems.
+  My recent work is the shared tooling and standards other teams build on — RFCs, internal libraries, cross-platform integrations —
+  used across the ~20-engineer organisation at **Huspy**, where I'm Tech Lead in the Core Team. Previously **Senior Backend Architect at GoodHabitz**,
+  reporting to the CTO.
+
+  I'm looking for a **Staff Engineer or Tech Lead** role where I keep defining the architecture and stay close to the code.
+
+socialLinks:
+  - name: Email
+    icon: "fas fa-envelope"
+    url: "arturbdr@gmail.com"
+  - name: GitHub
+    icon: "fab fa-github"
+    url: "https://github.com/arturbdr"
+  - name: LinkedIn
+    icon: "fab fa-linkedin"
+    url: "https://www.linkedin.com/in/arturbdr/"

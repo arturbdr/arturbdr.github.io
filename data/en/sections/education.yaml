@@ -1,0 +1,27 @@
+section:
+  name: Education
+  id: education
+  template: sections/education.html
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+degrees:
+  - name: "BSc in Computer Science"
+    icon: fa-graduation-cap
+    timeframe: "2004 – 2007"
+    institution:
+      name: "UNESP — Universidade Estadual Paulista"
+      url: "https://www.unesp.br/"
+
+  - name: "Sun Certified Web Component Developer (SCWCD 5.0)"
+    icon: fa-certificate
+    timeframe: "2010"
+    institution:
+      name: "Sun Microsystems"
+
+  - name: "Sun Certified Programmer (SCJP 5.0)"
+    icon: fa-certificate
+    timeframe: "2009"
+    institution:
+      name: "Sun Microsystems"

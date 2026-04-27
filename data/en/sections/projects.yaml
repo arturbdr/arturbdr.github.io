@@ -1,0 +1,56 @@
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  filter: false
+
+buttons:
+  - name: All
+    filter: "all"
+  - name: Huspy
+    filter: "huspy"
+  - name: GoodHabitz
+    filter: "goodhabitz"
+  - name: Jumbo
+    filter: "jumbo"
+  - name: Netshoes
+    filter: "netshoes"
+
+projects:
+  - name: "Internationalisation Platform"
+    role: "Tech Lead"
+    timeline: "2025 – Present"
+    summary: "Wrote the RFC, evaluated Crowdin and alternatives on CI/CD integration, proofreading workflow and cost. Designed and led the rollout across mobile, web and backend so all three platforms feed from the same translation source. Now live with 7 languages — adding a new locale no longer requires engineering work."
+    tags: ["huspy"]
+
+  - name: "Document Service"
+    role: "Tech Lead"
+    timeline: "2025 – Present"
+    summary: "Centralised document & image platform for the real-estate / mortgage domain. Kotlin / Spring Boot microservices with AWS Lambda image processing, S3, Postgres and CloudFront with signed URLs. Document load times dropped ~30% after Datadog-driven tuning."
+    tags: ["huspy"]
+
+  - name: "Shared JWT Validation Library"
+    role: "Tech Lead"
+    timeline: "2025 – Present"
+    summary: "Two libraries with identical behaviour — Spring Boot and Node.js. Caches signing keys per Keycloak realm and AWS Cognito pool at startup; validates per-request from the realm claim. Hand-written JWT validation is gone from every microservice; new realms are configuration, not code."
+    tags: ["huspy"]
+
+  - name: "LTI 1.3 Microservice (LMS Integration Strangler)"
+    role: "Senior Backend Architect"
+    timeline: "2024"
+    summary: "Replaced the legacy LMS-integration service using the Strangler Pattern; added support for LTI 1.3 on top of LTI 1.1 and SCORM. Migrated all clients with LaunchDarkly feature flags, no disruption. New Datadog dashboards exposed which companies and courses drove the most usage."
+    tags: ["goodhabitz"]
+
+  - name: "Strangling the Order Management System"
+    role: "Principal Engineer"
+    timeline: "2020 – 2022"
+    summary: "Identified domains living inside Jumbo's Java 7 / Mule / Spring 3 monolith and led their extraction into Spring Boot microservices using the Strangler Pattern. One full domain (~150,000 lines of code) extracted out and handed off to a new team. Smaller monolith, easier deploys, no production incidents during the strangling."
+    tags: ["jumbo"]
+
+  - name: "Checkout & Payment Integrations"
+    role: "Software Architect"
+    timeline: "2016 – 2018"
+    summary: "Built a new Java / Spring Boot checkout platform replacing the previous Oracle ATG one. Integrations with 7+ payment methods across Brazil, Argentina and Mexico. Jenkins CI/CD with Sonar metrics enforcing code quality on every push; Kafka and RabbitMQ for async integration; Redis and EhCache for hot reads."
+    tags: ["netshoes"]

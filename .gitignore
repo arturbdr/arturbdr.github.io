@@ -27,3 +27,6 @@ Thumbs.db
 .claude
 claude.md
 AGENTS.md
+# Node / npm
+node_modules/
+package-lock.json

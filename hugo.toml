@@ -1,42 +1,130 @@
 baseURL = 'https://arturbdr.github.io/'
 languageCode = 'en-us'
-title = 'Artur Drummond - Software Engineer'
-theme = 'hugo-coder'
+title = "Artur Drummond"
+theme = "toha"
+defaultContentLanguage = "en"
+enableEmoji = true
 
+# No taxonomy pages (no tags/categories on this site)
+disableKinds = ["taxonomy", "term"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 6
+ordered = false
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[outputFormats.rss]
+baseName = "rss"
+
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+disable = false
+
+# Mount Toha's npm runtime assets (Mulish font, KaTeX fonts) into the site.
+[module]
+[[module.mounts]]
+source = "node_modules/@fontsource/mulish/files"
+target = "static/files"
+[[module.mounts]]
+source = "node_modules/katex/dist/fonts"
+target = "static/fonts"
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+[[module.mounts]]
+source = "data"
+target = "data"
+[[module.mounts]]
+source = "i18n"
+target = "i18n"
+[[module.mounts]]
+source = "archetypes"
+target = "archetypes"
+[[module.mounts]]
+source = "content"
+target = "content"
+
+# Languages
+[languages]
+[languages.en]
+languageCode = "en"
+languageName = "English"
+title = "Artur Drummond"
+weight = 1
+
+# Site parameters
 [params]
-author = "Artur Drummond"
-info = "Backend Software Engineer"
-description = "Artur Drummond's personal website"
-keywords = "blog,developer,personal"
-colorScheme = "dark"
+gitRepo = "https://github.com/arturbdr/arturbdr.github.io"
+gitBranch = "main"
 
-# Menu links
-[menu]
-[[menu.main]]
-name = "About"
-weight = 1
-url = "about/"
-[[menu.main]]
-name = "Experience"
-weight = 2
-url = "experience/"
-[[menu.main]]
-name = "Projects"
-weight = 3
-url = "projects/"
-[[menu.main]]
-name = "Contact"
-weight = 4
-url = "contact/"
+[params.topNavbar]
+maxVisibleSections = 5
 
-# Social links
-[[params.social]]
-name = "Github"
-icon = "fa fa-github fa-2x"
-weight = 1
-url = "https://github.com/arturbdr/"
-[[params.social]]
-name = "LinkedIn"
-icon = "fa fa-linkedin fa-2x"
-weight = 2
-url = "https://linkedin.com/in/arturbdr/"
+# Theme features
+[params.features]
+[params.features.theme]
+enable = true
+[params.features.theme.services]
+light = true
+dark = true
+default = "system"
+
+[params.features.portfolio]
+enable = true
+
+[params.features.blog]
+enable = false
+
+[params.features.notes]
+enable = false
+
+[params.features.toc]
+enable = false
+
+[params.features.tags]
+enable = false
+
+[params.features.flags]
+enable = false
+
+[params.features.readingTime]
+enable = false
+
+[params.features.copyCodeButton]
+enable = true
+
+[params.features.syntaxHighlight]
+enable = true
+[params.features.syntaxHighlight.services]
+[params.features.syntaxHighlight.services.hljs]
+noHighlightRe = "/^no-highlight$/i"
+
+# Footer config
+[params.footer]
+enable = true
+template = "footer.html"
+[params.footer.navigation]
+enable = true
+customMenus = false
+[params.footer.contactMe]
+enable = true
+[params.footer.credentials]
+enable = true
+[params.footer.newsletter]
+enable = false
+[params.footer.disclaimer]
+enable = false
