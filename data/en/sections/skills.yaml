@@ -24,79 +24,84 @@ skills:
   - name: Java
     logo: /images/sections/skills/java.svg
     summary: "Primary language since 2007. Currently Java 8 through 25 on Spring Boot microservices and Strangler-pattern monolith rebuilds."
-    categories: ["language", "backend"]
+    categories: [ "language", "backend" ]
 
   - name: Kotlin
     logo: /images/sections/skills/kotlin.svg
     summary: "Production Kotlin since 2021. Spring Boot services at Huspy, GoodHabitz and Jumbo. Coroutines and idiomatic Kotlin on the JVM."
-    categories: ["language", "backend"]
+    categories: [ "language", "backend" ]
 
   - name: TypeScript / Node.js
     logo: /images/sections/skills/typescript.svg
     summary: "NestJS Backend-for-Frontend and microservices at Huspy and Jumbo. Strict TypeScript, Clean Architecture, Node 18+."
-    categories: ["language", "backend"]
+    categories: [ "language", "backend" ]
 
   - name: ".NET (6 / 8)"
     logo: /images/sections/skills/dotnet.svg
     summary: "Built and rewrote .NET services at GoodHabitz, including the LTI 1.3 Strangler rebuild on .NET 6 and 8."
-    categories: ["language", "backend"]
+    categories: [ "language", "backend" ]
 
   - name: Spring Boot
     logo: /images/sections/skills/spring.svg
     summary: "Ten years on Spring Boot for backend services. Spring Cloud (Feign, ConfigServer, Zuul), Spring Security, JPA, event-driven patterns."
-    categories: ["backend"]
+    categories: [ "backend" ]
 
   - name: NestJS
     logo: /images/sections/skills/nestjs.svg
     summary: "Backend-for-Frontend and microservices in NestJS. Modular structure, dependency injection, TypeScript-first APIs."
-    categories: ["backend"]
+    categories: [ "backend" ]
 
   - name: AWS
     logo: /images/sections/skills/aws.svg
     summary: "Lambda, S3, RDS, SQS/SNS, CloudFront, Cognito, EC2. Migrations from on-prem and other clouds onto AWS, plus the production workloads at Huspy and Jumbo."
-    categories: ["cloud"]
+    categories: [ "cloud" ]
 
   - name: GCP
     logo: /images/sections/skills/gcp.svg
     summary: "Pub/Sub for async event flows. Built and ran services on GKE and Cloud Run during the GoodHabitz era before the AWS consolidation."
-    categories: ["cloud"]
+    categories: [ "cloud" ]
 
   - name: Terraform
     logo: /images/sections/skills/terraform.svg
     summary: "Provisioned the AWS infrastructure for the OneCloud migration at GoodHabitz and the Document Service at Huspy. Modules, remote state, plan/apply workflow."
-    categories: ["cloud"]
+    categories: [ "cloud" ]
 
   - name: Kubernetes
     logo: /images/sections/skills/kubernetes.svg
     summary: "Production deployments since 2018. Auto-scaling microservices, Helm, kubectl and the operational glue around them."
-    categories: ["cloud"]
+    categories: [ "cloud" ]
 
   - name: Docker
     logo: /images/sections/skills/docker.svg
     summary: "Multi-stage builds, hardened production images, local dev compose stacks across every backend project of the last 8 years."
-    categories: ["cloud"]
+    categories: [ "cloud" ]
 
   - name: PostgreSQL
     logo: /images/sections/skills/postgresql.svg
     summary: "Primary relational store on most projects. Schema design, migrations (Flyway / Liquibase), tuning and partition strategies for high-write workloads."
-    categories: ["data"]
+    categories: [ "data" ]
 
   - name: MongoDB
     logo: /images/sections/skills/mongodb.svg
     summary: "Document-store workloads at Jumbo and Netshoes, including replacing a relational DB that couldn't keep up with the read volume."
-    categories: ["data"]
+    categories: [ "data" ]
 
   - name: Redis
     logo: /images/sections/skills/redis.svg
     summary: "Caching tier in front of slow legacy systems and as a hot-read store for frequently accessed data."
-    categories: ["data"]
+    categories: [ "data" ]
+
+  - name: Apache Kafka
+    logo: /images/sections/skills/kafka.svg
+    summary: "Event-driven backbone since 2018. Domain events between Huspy's services on AWS MSK, with Avro schemas in a Schema Registry. Outbox pattern and idempotent consumers so nothing gets lost or processed twice. Both Kotlin / Spring Boot and Node.js services produce and consume them."
+    categories: [ "backend", "data" ]
 
   - name: Datadog
     logo: /images/sections/skills/datadog.svg
     summary: "APM, logs, dashboards, alerting. Standard set across Huspy, GoodHabitz, Jumbo and Netshoes. The Datadog metrics drove the ~30% latency improvement on the Document Service."
-    categories: ["observability"]
+    categories: [ "observability" ]
 
   - name: Grafana / CloudWatch
     logo: /images/sections/skills/grafana.svg
     summary: "Custom dashboards for stakeholder visibility (e.g. Finance team monitoring the Salesforce / Backoffice flow at GoodHabitz)."
-    categories: ["observability"]
+    categories: [ "observability" ]

@@ -20,6 +20,7 @@ experiences:
           - "**Document Service**: designed and built a centralised document and image platform on Kotlin / Spring Boot with AWS Lambda, S3, Postgres and CloudFront. Document load times dropped ~30% after Datadog-driven tuning."
           - "**Shared JWT validation library** (Spring Boot + Node.js): centralised JWT validation across multiple Keycloak realms and AWS Cognito. Used by every backend service; new realms can be added through configuration."
           - "**Backend-for-Frontend**: NestJS BFF now shared by mobile and web teams. Removed duplicated orchestration code and extra network round-trips; one security-check entry point."
+          - "**Domain events over Kafka**: services talk to each other through domain events on Kafka (AWS MSK, Avro schemas in a Schema Registry) instead of calling each other directly, so one team's change doesn't break another. The outbox pattern and idempotent consumers stop events from getting lost or processed twice. Both the Kotlin / Spring Boot and Node.js / NestJS services produce and consume them."
 
   - company:
       name: "GoodHabitz"
